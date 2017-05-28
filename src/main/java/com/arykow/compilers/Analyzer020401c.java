@@ -4,6 +4,13 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 
+/*
+ * S -> 0 S 1 | 0 1
+ * is equivalent to
+ * 
+ * S -> 0 R
+ * R -> S 1 | 1
+ */
 public class Analyzer020401c extends Analyzer {
 
 	public Analyzer020401c(InputStream inputStream) {

@@ -2,14 +2,18 @@ package com.arykow.compilers;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.io.StringWriter;
+
 /*
  * S -> S ( S ) S | e
+ * is equivalent to
  * 
  * S -> e R
  * R -> ( S ) S R | e
+ * is equivalent to
+ * 
+ * S -> ( S ) S S | e
  */
-import java.io.StringWriter;
-
 public class Analyzer020401b extends Analyzer {
 
 	public Analyzer020401b(InputStream inputStream) {
@@ -37,6 +41,7 @@ public class Analyzer020401b extends Analyzer {
 			ruleS();
 			match(')');
 			i -= 1;
+			ruleS();
 			ruleS();
 		}
 	}

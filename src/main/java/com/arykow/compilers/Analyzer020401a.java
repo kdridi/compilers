@@ -4,6 +4,9 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.StringWriter;
 
+/*
+ * S -> + S S | - S S | a
+ */
 public class Analyzer020401a extends Analyzer {
 
 	public Analyzer020401a(InputStream inputStream) {
